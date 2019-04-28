@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Theo dõi sự thay đổi cơ sở dũ liệu của 1 đối tượng-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Mview/etc/mview.xsd">
+    <view id="khoa_currency_indexer" class="Khoa\Currency\Model\Indexer\Test" group="indexer">
+        <subscriptions>
+            <table name="catalog_product_entity" entity_column="entity_id" />
+        </subscriptions>
+    </view>
+</config>

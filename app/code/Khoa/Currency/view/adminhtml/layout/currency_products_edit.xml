@@ -1,0 +1,11 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <head>
+        <title>Edit Product</title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Khoa\Currency\Block\Admin\Product\Edit" name="admin.product.edit"  template="Khoa_Currency::product/edit.phtml" />
+        </referenceContainer>
+    </body>
+</page>

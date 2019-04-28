@@ -1,0 +1,15 @@
+<?php
+    echo $block->helloAdmin();
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$FormKey = $objectManager->get('Magento\Framework\Data\Form\FormKey');
+?>
+<form action="<?php echo $this->getUrl("currency/products/index"); ?>" method="post">
+    <input name="form_key" type="hidden" value="<?php echo $FormKey->getFormKey();?>">
+    <button type="submit">Hiện tất cả các product in Khoa_currency</button>
+</form>
+<!--<form action="--><?php //?><!--" method="post">-->
+<!--    <button type="submit">Hiện tất cả các product in Khoa_currency</button>-->
+<!--</form>-->
+<!--<form action="--><?php //?><!--" method="post">-->
+<!--    <button type="submit">Hiện tất cả các product in Khoa_currency</button>-->
+<!--</form>-->

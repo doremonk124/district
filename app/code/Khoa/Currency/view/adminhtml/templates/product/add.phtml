@@ -1,0 +1,9 @@
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$FormKey = $objectManager->get('Magento\Framework\Data\Form\FormKey');
+?>
+<form action="<?php echo $this->getUrl('currency/products/newproduct') ?>" method="post">
+    <input type="text" name="name">
+    <input name="form_key" type="hidden" value="<?php echo $FormKey->getFormKey();?>">
+    <button type="submit" name="submit">Add</button>
+</form>

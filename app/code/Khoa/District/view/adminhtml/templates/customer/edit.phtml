@@ -1,0 +1,17 @@
+<!--<style>-->
+<!--    .hideme{display:none;}-->
+<!--</style>-->
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$FormKey = $objectManager->get('Magento\Framework\Data\Form\FormKey');
+?>
+<?php echo $block->getUrlController(); ?>
+<div class="hideme" data-mage-init='{"ajax": {"message": "<?php echo $block->getUrlController() ?>",
+"key":"<?php echo $FormKey->getFormKey();?>"}}'>
+    content
+</div>
+<form action="<?php echo $block->getUrlController(); ?>" method="post">
+    <input type="text" name="title">
+    <input name="form_key" type="hidden" value="<?php echo $FormKey->getFormKey();?>">
+    <button type="submit" name="submit">submit</button>
+</form>

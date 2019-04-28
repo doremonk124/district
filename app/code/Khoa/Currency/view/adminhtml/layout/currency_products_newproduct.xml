@@ -1,0 +1,11 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <head>
+        <title>Add Product</title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Khoa\Currency\Block\Admin\Add" name="add.khoa.currency"  template="Khoa_Currency::product/add.phtml" />
+        </referenceContainer>
+    </body>
+</page>

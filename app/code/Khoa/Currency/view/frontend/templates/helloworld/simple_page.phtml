@@ -1,0 +1,34 @@
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$FormKey = $objectManager->get('Magento\Framework\Data\Form\FormKey');
+?>
+
+<form action="<?php echo $block->getUrlController(); ?>" method="post" id="form_height">
+    <input type="text" name="title">
+    <input name="form_key" type="hidden" value="<?php echo $FormKey->getFormKey();?>">
+    <button type="submit" name="submit">submit</button>
+</form>
+<?php echo $block->getUrlController(); ?>
+<br>
+<?php echo $block->sayHello(); ?>
+<br>
+<?php $id = '4';
+$_product = $block->getProductById($id);
+
+//Get product object by SKU
+// $sku = 'PRODUCT_SKU';
+// $_product = $block->getProductBySku($sku);
+
+//$imageId = 'product_base_image';
+//$width = 200;
+//$height = 300;
+$product_url = $block->getImageProduct($_product);
+
+?>
+<img src="<?php echo $product_url;?>" alt="<?php echo $_product->getTitle();?>" />
+<script type="text/javascript">
+    window.onload = function()
+    {
+        alert('hhehe');
+    };
+</script>
